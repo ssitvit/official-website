@@ -577,95 +577,190 @@ small {
 
 /* Project section */
 
+#hardware, #software.hide, #hardware.hide{display: none;}
+.soft-title, .hard-title{cursor: pointer;}
 #projects {
-	height: fit-content;
-	object-fit: cover;
-	background-image: url(./img/project-bg.png);
-	background-size: cover;
-	background-position: center !important;
-	background-attachment: fixed;
-	background-repeat: no-repeat;
-	padding-bottom: 3em;
+    height: fit-content;
+    object-fit: cover;
+    background-image: url(https://media3.giphy.com/media/W2VifgXysWenh1aikp/giphy.gif);
+    background-size: cover;
+    background-position: center !important;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    padding-bottom: 14em;
 }
 
 .project-container {
-	display: flex;
-	justify-content: space-evenly;
-	flex-wrap: wrap;
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    margin-top: 75px;
 }
-
+.hard.ui-state-active{
+    color: #fff;
+    border-radius: 0 10px 10px 0;
+    /* clip-path: inset(0px 0px 0px 50%); */
+    background-color: rgb(215, 64, 70);
+}
+.soft.ui-state-active{
+    color: #fff;
+    border-radius: 10px 0px 0px 10px;
+    /* clip-path: inset(0px 0px 0px 50%); */
+    background-color: rgb(48, 121, 190);
+}
+.ui-state-active a{color:#fff;}
+.soft{border-radius: 10px 0 0 10px;}
+.hard{border-radius: 0px 10px 10px 0px;}
 .project-link {
-	text-decoration: none;
-	color: #f1f1f1;
+    text-decoration: none;
+    color: #f1f1f1;
 }
-
+.sectionHeading {
+    color: white;
+    font-weight: 600;
+    font-size: 3.4rem;
+    text-align: center;
+    padding-top: 2rem;
+	letter-spacing: 3px
+}
 .project-link:hover {
-	color: #dcdcdc;
+    color: #dcdcdc;
 }
-
+.project-group>ul>li a{color:#fff;
+    font-family: 'Righteous','cursive';}
+.project-group>ul>li{
+    list-style: none;
+    display: inline-flex;
+    margin: 5px -3px;
+    padding: 7px 10px;
+    border: 2px solid;
+    border-color: #fffbfb;
+    background-color: rgb(15 14 14 / 16%)
+    
+}
+#hardware{
+    display: flex
+    ;
+}
 .project-group {
-	color: white;
-	font-size: 1.4rem;
-	text-align: center;
-	margin: 1em;
-	font-family: Equinox, Epilogue;
+    color: white;
+    font-size: 1.4rem;
+    text-align: center;
+    margin: 1em;
+    font-family: Equinox, Epilogue;
 }
-
+.project-info{
+	color: #efefef;
+	padding: 0%;
+}
+.project-title {
+    color: #f1f1f1;
+    font-size: 2rem;
+    text-align: center;
+    padding-bottom: 10px;
+}
 .project-card-software {
-	display: inline-block;
-	width: 300px;
-	background: rgba(255, 255, 255, 0.2);
-	padding: 1.8em;
-	border-radius: 0.5em;
-	position: relative;
-	z-index: 1;
-	backdrop-filter: blur(12px);
-	border: solid 2px transparent;
-	background-clip: padding-box;
-	box-shadow: 10px 10px 10px rgba(46, 54, 68, 0.03);
-	left: -100px;
-	-webkit-animation: slide 1s forwards;
-	-webkit-animation-delay: 3s;
-	animation: slide 1s forwards;
-	animation-delay: 3s;
-	margin: 0.4em;
+    display: inline-block;
+    width: 300px;
+    background: #2f2b2b4f;
+    padding: 1.8em;
+    border-radius: 0.5em;
+    position: relative;
+    z-index: 1;
+    backdrop-filter: blur(12px);
+    border: solid 2px transparent;
+    background-clip: padding-box;
+    box-shadow: 10px 10px 10px #2c2e316e;
+    -webkit-animation: slide 1s forwards;
+    animation: slide 1s forwards;
+    margin: 0.4em;
 }
 
 .project-card-hardware {
-	display: inline-block;
-	width: 300px;
-	height: 300px;
-	background: rgba(255, 255, 255, 0.2);
-	padding: 1.8em;
-	border-radius: 0.5em;
-	position: relative;
-	z-index: 1;
-	backdrop-filter: blur(12px);
-	border: solid 2px transparent;
-	background-clip: padding-box;
-	box-shadow: 10px 10px 10px rgba(46, 54, 68, 0.03);
-	left: -100px;
-	-webkit-animation: slide 1s forwards;
-	-webkit-animation-delay: 3s;
-	animation: slide 1s forwards;
-	animation-delay: 3s;
-	margin: 0.4em;
+    display: inline-block;
+    width: 300px;
+    height: 300px;
+    background: #2f2b2b4f;
+    padding: 1.8em;
+    border-radius: 0.5em;
+    position: relative;
+    z-index: 1;
+    backdrop-filter: blur(12px);
+    border: solid 2px transparent;
+    background-clip: padding-box;
+    box-shadow: 10px 10px 10px #2c2e316e;
+   -webkit-animation: slide 1s forwards;
+    
+    animation: slide 1s forwards;
+   
+    margin: 0.4em;
 }
 
 .project-card-software:hover {
-	transform: scale(1.02);
-	transition: 0.5s ease;
+    transform: scale(1.04);
+    transition: 0.5s ease;
+    box-shadow: 0 0 1px 2px #efefef;
 }
 
 .project-card-hardware:hover {
-	transform: scale(1.02);
-	transition: 0.5s ease;
+    transform: scale(1.04);
+    transition: 0.5s ease;
+    box-shadow: 0 0 1px 2px #efefef;
 }
 
 .project-title {
-	color: #f1f1f1;
-	font-size: 2rem;
+    color: #f1f1f1;
+    font-size: 2rem;
 }
+
+.comming-soon {
+    color: #dcdcdc;
+    opacity: 0.9;
+    font-family: Equinox, Epilogue;
+    font-size: 14px;
+    margin: 20% auto 0;
+    text-align: center;
+}
+
+@-webkit-keyframes slide {
+    0%{
+        transform: scale(0);
+    }
+    50%{
+        transform:scale(0.2);
+    }
+    100% {
+        transform: scale(0.4);
+    }
+}
+
+@keyframes slide {
+    0%{
+        transform: scale(1);
+    }
+    25%{
+        transform: scale(1.075);
+    }
+    50%{
+        transform:scale(1.15);
+    }
+    75%{
+        transform: scale(1.075);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+.site-section {
+    padding: 30px;
+}
+
+.sub-title {
+    font-weight: bold;
+    font-size: 18px;
+}
+
 
 .comming-soon {
 	color: #dcdcdc;
@@ -1080,4 +1175,71 @@ body {
 	#navp {
 		display: block;
 	}
+	.sectionHeading {
+        /* margin-top: 2rem; */
+        padding-top: 1rem;
+        font-size: 2.5rem;
+    }
+    p {
+        margin-left: 4px;
+        margin-bottom: 1rem;
+        font-size: 13px;
+    }
+    .project-title {
+        color: #f1f1f1;
+        font-size: 22px;
+    }
+    
+    h2.project-title {
+        margin-bottom: 13px;
+        font-weight: 400;
+        text-align: center;
+    }
+
+    .project-card-software {
+        display: inline-block;
+        width: 270px;
+        background: #2f2b2b4f;
+        padding: 0.8em;
+        border-radius: 0.5em;
+        position: relative;
+        left:-100px;
+        z-index: 1;
+        backdrop-filter: blur(12px);
+        border: solid 2px transparent;
+        background-clip: padding-box;
+        box-shadow: 10px 10px 10px #2c2e316e;
+        -webkit-animation: slide 1s forwards;
+        animation: slide 1s forwards;
+        margin: 0.8em;
+    }
+    .project-card-hardware {
+        display: inline-block;
+    width: 288px;
+    height: 190px;
+    background: #2f2b2b4f;
+    padding: 1.8em;
+    border-radius: 0.5em;
+    position: relative;
+    left: -100px;
+    z-index: 1;
+    backdrop-filter: blur(12px);
+    border: solid 2px transparent;
+    background-clip: padding-box;
+    box-shadow: 10px 10px 10px #2c2e316e;
+    -webkit-animation: slide 1s forwards;
+    animation: slide 1s forwards;
+    margin: 0.8em;
+}
+dl, ol, ul {
+    margin-top: 0px;
+    margin-bottom: -4rem;
+}
+    @keyframes slide {
+        100%{
+            left:0px;
+        }
+    }
+    .project-group>ul>li a{font-size:0.8em;}
+
 }
